@@ -1,4 +1,6 @@
-export default function use(promise) {
+export default function use ( promise )
+{
+    console.log( 'promise', promise );
     if (promise.status === "fulfilled") {
         return promise.value;
     } else if (promise.status === "rejected") {
@@ -8,11 +10,15 @@ export default function use(promise) {
     } else {
         promise.status = "pending";
         promise.then(
-            (result) => {
+            ( result ) =>
+            {
+                console.log('result', result)
                 promise.status = "fulfilled";
                 promise.value = result;
             },
-            (reason) => {
+            ( reason ) =>
+            {
+                console.log('reason', reason)
                 promise.status = "rejected";
                 promise.reason = reason;
             }
