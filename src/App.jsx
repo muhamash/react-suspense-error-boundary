@@ -1,4 +1,5 @@
 import { Suspense, useState } from "react";
+import { FadeLoader } from 'react-spinners';
 import './App.css';
 import Comments from "./components/Comments";
 import PostSelector from "./components/PostSelector";
@@ -15,7 +16,7 @@ function App() {
     <div>
       <h1>React suspense and error boundary!!</h1>
       <div> 
-        <Suspense fallback={ <h1>Loading posts...</h1> }>
+        <Suspense fallback={ <FadeLoader size={200} color="#36d7b7" /> }>
           <PostSelector onSelectPost={ handleSelectPost } />
         </Suspense>
         { selectedPostId && <Comments postId={ selectedPostId } />}
