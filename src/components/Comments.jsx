@@ -4,15 +4,18 @@
 // import use from "../hooks/use";
 // import { fetchData } from "../utils/data";
 
+import use from "../hooks/use";
+import { fetchData } from "../utils/fetchFunction";
+
 export default function Comments({ postId }) {
-    // const comments = use(
-    //     fetchData(
-    //         `https://jsonplaceholder.typicode.com/posts/${postId}/comments`
-    //     )
-    // );
+    const comments = use(
+        fetchData(
+            `https://jsonplaceholder.typicode.com/posts/${postId}/comments`
+        )
+    );
 
     return (
-        <div>
+        <div className='card'>
             <h2>Comments</h2>
 
             <div>

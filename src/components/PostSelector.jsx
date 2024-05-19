@@ -2,7 +2,7 @@
 import fetchPost from "../api/FetchPost";
 
 /* eslint-disable react/prop-types */
-const response = fetchPost('https://jsonplaceholder.typicode.com/posts?_limit=5')
+const response = fetchPost('https://jsonplaceholder.typicode.com/posts?_limit=10')
 
 export default function PostSelector({ onSelectPost }) {
     // const posts = resource.read();

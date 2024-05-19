@@ -35,8 +35,21 @@
 
 .card {
   padding: 2em;
+  background-color: rgb(232, 230, 228);
+  border: #0c7598 1px solid;
+  margin-top: 15px;
+  border-radius: 8px;
 }
 
 .read-the-docs {
   color: #888;
+}
+
+.error-text{
+  font-family: monospace;
+  color: red;
+  background-color: aquamarine;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
 }
