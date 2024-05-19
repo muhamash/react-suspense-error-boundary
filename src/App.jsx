@@ -14,7 +14,7 @@ function App() {
   return (
     <div>
       <h1>React suspense and error boundary!!</h1>
-      <div>
+      <div> 
         <Suspense fallback={ <h1>Loading posts...</h1> }>
           <PostSelector onSelectPost={ handleSelectPost } />
         </Suspense>
