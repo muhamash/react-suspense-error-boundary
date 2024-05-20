@@ -21,7 +21,11 @@ function App() {
           <Suspense fallback={ <FadeLoader size={ 200 } color="#36d7b7" /> }>
             <PostSelector onSelectPost={ handleSelectPost } />
           </Suspense>
-          { selectedPostId && <Suspense fallback={ <PuffLoader size={ 200 } color="#36d7b7" /> }>
+          { selectedPostId && <Suspense fallback={ <div className="py-10">
+            <PuffLoader style={{
+              position: 'absolute',
+            }}   size={ 200 } color="#36d7b7" />
+          </div> }>
             <Comments postId={ selectedPostId } />
           </Suspense> }
         </ErrorBoundary>
